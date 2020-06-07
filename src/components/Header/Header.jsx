@@ -1,18 +1,21 @@
 import React from "react";
-import '../../../node_modules/font-awesome/scss/font-awesome.scss'; 
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faShoppingBag, faSearch } from '@fortawesome/free-solid-svg-icons';
+
+import './Header.scss';
 
 const Header = () => (
     <header className="topbar"> 
-        <div className="container">
+        <div className="topbar__container">
             <a href="/" className="topbar__logo">
-                <h1>FASHIONISTA</h1>
+                <h3>FASHIONISTA</h3>
             </a>
             <div className="topbar__options">
                 <button className="topbar__search">
-                    <i className="fas fa-search"></i>
+                    <FontAwesomeIcon icon={ faSearch }/>
                 </button>
                 <button className="topbar__bag">
-                    <i className="fas fa-shopping-bag"></i>0
+                    <FontAwesomeIcon icon={ faShoppingBag }/><span>0</span>
                 </button>
             </div>
         </div>
