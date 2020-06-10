@@ -1,13 +1,23 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import './index.scss';
-import App from './App';
+import App from '../src/pages/home/App';
+import NotFound from './pages/not-found/not-found';
+import Product from './pages/product/product';
+
 import * as serviceWorker from './serviceWorker';
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+  <BrowserRouter>
+    <Switch>
+      <Route path='/' exact={true} component={App} />
+      <Route path='/product' component={Product} />
+      <Route component={NotFound} />
+    </Switch>
+  </BrowserRouter>
+  
+  ,
   document.getElementById('root')
 );
 

@@ -1,274 +1,29 @@
 import React, { Fragment } from "react";
-import image from "../../assets/img/20002605_615_catalog_1.jpg";
+import { Link } from 'react-router-dom';
 
+// import LinkWrapper from '../../utils/LinkWrapper';
 import "./ItemGrid.scss";
 
-const ItemGrid = () => (
+const ItemGrid = (props) => {
+  const { item } = props;
+  const path = `/product/${item.name}`;
+
+  return (
+
   <Fragment>
     <div className="grid__box">
-      <a href="/">
+      <Link to={path}>
         <figure className="grid__image">
-          <img src={image} alt="item" />
+          <img src={item.image} alt="item" />
         </figure>
-        <h3 className="grid__product">VESTIDO TRANSPASSE BOW</h3>
+        <h3 className="grid__product">{item.name}</h3>
         <div className="grid__price">
-          <span>R$ 199,90</span>
+          <span>{item.regular_price}</span>
         </div>
-      </a>
-    </div>
-
-    <div className="grid__box">
-      <a href="/">
-        <figure className="grid__image">
-          <img src={image} alt="item" />
-        </figure>
-        <h3 className="grid__product">VESTIDO TRANSPASSE BOW</h3>
-        <div className="grid__price">
-          <span>R$ 199,90</span>
-        </div>
-      </a>
-    </div>
-
-    <div className="grid__box">
-      <a href="/">
-        <figure className="grid__image">
-          <img src={image} alt="item" />
-        </figure>
-        <h3 className="grid__product">VESTIDO TRANSPASSE BOW</h3>
-        <div className="grid__price">
-          <span>R$ 199,90</span>
-        </div>
-      </a>
-    </div>
-
-    <div className="grid__box">
-      <a href="/">
-        <figure className="grid__image">
-          <img src={image} alt="item" />
-        </figure>
-        <h3 className="grid__product">VESTIDO TRANSPASSE BOW</h3>
-        <div className="grid__price">
-          <span>R$ 199,90</span>
-        </div>
-      </a>
-    </div>
-
-    <div className="grid__box">
-      <a href="/">
-        <figure className="grid__image">
-          <img src={image} alt="item" />
-        </figure>
-        <h3 className="grid__product">VESTIDO TRANSPASSE BOW</h3>
-        <div className="grid__price">
-          <span>R$ 199,90</span>
-        </div>
-      </a>
-    </div>
-
-    <div className="grid__box">
-      <a href="/">
-        <figure className="grid__image">
-          <img src={image} alt="item" />
-        </figure>
-        <h3 className="grid__product">VESTIDO TRANSPASSE BOW</h3>
-        <div className="grid__price">
-          <span>R$ 199,90</span>
-        </div>
-      </a>
-    </div>
-
-    <div className="grid__box">
-      <a href="/">
-        <figure className="grid__image">
-          <img src={image} alt="item" />
-        </figure>
-        <h3 className="grid__product">VESTIDO TRANSPASSE BOW</h3>
-        <div className="grid__price">
-          <span>R$ 199,90</span>
-        </div>
-      </a>
-    </div>
-
-    <div className="grid__box">
-      <a href="/">
-        <figure className="grid__image">
-          <img src={image} alt="item" />
-        </figure>
-        <h3 className="grid__product">VESTIDO TRANSPASSE BOW</h3>
-        <div className="grid__price">
-          <span>R$ 199,90</span>
-        </div>
-      </a>
-    </div>
-
-    <div className="grid__box">
-      <a href="/">
-        <figure className="grid__image">
-          <img src={image} alt="item" />
-        </figure>
-        <h3 className="grid__product">VESTIDO TRANSPASSE BOW</h3>
-        <div className="grid__price">
-          <span>R$ 199,90</span>
-        </div>
-      </a>
-    </div>
-
-    <div className="grid__box">
-      <a href="/">
-        <figure className="grid__image">
-          <img src={image} alt="item" />
-        </figure>
-        <h3 className="grid__product">VESTIDO TRANSPASSE BOW</h3>
-        <div className="grid__price">
-          <span>R$ 199,90</span>
-        </div>
-      </a>
-    </div>
-
-    <div className="grid__box">
-      <a href="/">
-        <figure className="grid__image">
-          <img src={image} alt="item" />
-        </figure>
-        <h3 className="grid__product">VESTIDO TRANSPASSE BOW</h3>
-        <div className="grid__price">
-          <span>R$ 199,90</span>
-        </div>
-      </a>
-    </div>
-
-    <div className="grid__box">
-      <a href="/">
-        <figure className="grid__image">
-          <img src={image} alt="item" />
-        </figure>
-        <h3 className="grid__product">VESTIDO TRANSPASSE BOW</h3>
-        <div className="grid__price">
-          <span>R$ 199,90</span>
-        </div>
-      </a>
-    </div>
-
-    <div className="grid__box">
-      <a href="/">
-        <figure className="grid__image">
-          <img src={image} alt="item" />
-        </figure>
-        <h3 className="grid__product">VESTIDO TRANSPASSE BOW</h3>
-        <div className="grid__price">
-          <span>R$ 199,90</span>
-        </div>
-      </a>
-    </div>
-
-    <div className="grid__box">
-      <a href="/">
-        <figure className="grid__image">
-          <img src={image} alt="item" />
-        </figure>
-        <h3 className="grid__product">VESTIDO TRANSPASSE BOW</h3>
-        <div className="grid__price">
-          <span>R$ 199,90</span>
-        </div>
-      </a>
-    </div>
-
-    <div className="grid__box">
-      <a href="/">
-        <figure className="grid__image">
-          <img src={image} alt="item" />
-        </figure>
-        <h3 className="grid__product">VESTIDO TRANSPASSE BOW</h3>
-        <div className="grid__price">
-          <span>R$ 199,90</span>
-        </div>
-      </a>
-    </div>
-
-    <div className="grid__box">
-      <a href="/">
-        <figure className="grid__image">
-          <img src={image} alt="item" />
-        </figure>
-        <h3 className="grid__product">VESTIDO TRANSPASSE BOW</h3>
-        <div className="grid__price">
-          <span>R$ 199,90</span>
-        </div>
-      </a>
-    </div>
-
-    <div className="grid__box">
-      <a href="/">
-        <figure className="grid__image">
-          <img src={image} alt="item" />
-        </figure>
-        <h3 className="grid__product">VESTIDO TRANSPASSE BOW</h3>
-        <div className="grid__price">
-          <span>R$ 199,90</span>
-        </div>
-      </a>
-    </div>
-
-    <div className="grid__box">
-      <a href="/">
-        <figure className="grid__image">
-          <img src={image} alt="item" />
-        </figure>
-        <h3 className="grid__product">VESTIDO TRANSPASSE BOW</h3>
-        <div className="grid__price">
-          <span>R$ 199,90</span>
-        </div>
-      </a>
-    </div>
-
-    <div className="grid__box">
-      <a href="/">
-        <figure className="grid__image">
-          <img src={image} alt="item" />
-        </figure>
-        <h3 className="grid__product">VESTIDO TRANSPASSE BOW</h3>
-        <div className="grid__price">
-          <span>R$ 199,90</span>
-        </div>
-      </a>
-    </div>
-
-    <div className="grid__box">
-      <a href="/">
-        <figure className="grid__image">
-          <img src={image} alt="item" />
-        </figure>
-        <h3 className="grid__product">VESTIDO TRANSPASSE BOW</h3>
-        <div className="grid__price">
-          <span>R$ 199,90</span>
-        </div>
-      </a>
-    </div>
-
-    <div className="grid__box">
-      <a href="/">
-        <figure className="grid__image">
-          <img src={image} alt="item" />
-        </figure>
-        <h3 className="grid__product">VESTIDO TRANSPASSE BOW</h3>
-        <div className="grid__price">
-          <span>R$ 199,90</span>
-        </div>
-      </a>
-    </div>
-
-    <div className="grid__box">
-      <a href="/">
-        <figure className="grid__image">
-          <img src={image} alt="item" />
-        </figure>
-        <h3 className="grid__product">VESTIDO TRANSPASSE BOW</h3>
-        <div className="grid__price">
-          <span>R$ 199,90</span>
-        </div>
-      </a>
+      </Link>
     </div>
   </Fragment>
-);
+)
+  };
 
 export default ItemGrid;
